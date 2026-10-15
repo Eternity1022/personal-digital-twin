@@ -1,40 +1,420 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="李昕彤的个人主页与数字分身：AI应用、产品思维、自动化与业务数字化实践。">
-<meta name="theme-color" content="#f3f5f1"><meta property="og:title" content="李昕彤｜AI × 产品实践"><meta property="og:description" content="计算机专业背景，探索 AI 应用、产品思维与真实业务场景。"><meta property="og:type" content="website"><title>李昕彤｜AI × Product · Personal Space</title>
+<meta name="theme-color" content="#f3f5f1">
+<meta property="og:title" content="李昕彤｜AI × 产品实践">
+<meta property="og:description" content="计算机专业背景，探索 AI 应用、产品思维与真实业务场景。">
+<meta property="og:type" content="website">
+<title>李昕彤｜AI × Product · Personal Space</title>
 <style>
-:root{--bg:#f3f5f1;--surface:#ffffff;--surface2:#e9eee8;--ink:#202b27;--muted:#6f7c75;--line:#dce4dc;--green:#557a68;--green-dark:#29483b;--sage:#d8e3d8;--lilac:#e6e1ee;--clay:#ead5c9;--yellow:#e9e5c9;--shadow:0 16px 45px #263d3010;--max:1180px}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button,input{font:inherit}a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid #88a995;outline-offset:3px}.wrap{width:min(calc(100% - 48px),var(--max));margin:auto}
-.nav{height:74px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:8;background:#f3f5f1eF;backdrop-filter:blur(14px)}.brand{font-size:15px;font-weight:850;letter-spacing:-.04em}.brand span{color:var(--green)}.navlinks{display:flex;gap:26px;color:var(--muted);font-size:13px}.navlinks a{transition:color .2s}.navlinks a:hover{color:var(--green)}
-.pill{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:99px;padding:7px 12px;font-size:11px;color:var(--green-dark);background:#fff9}.dot{width:7px;height:7px;background:#6c9c7c;border-radius:50%;box-shadow:0 0 0 4px #6c9c7c22}.hero{padding:48px 0 54px;display:grid;grid-template-columns:1.03fr .97fr;gap:26px;align-items:stretch;min-height:0}.hero>div:first-child{padding:25px 12px 22px 0;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.eyebrow{letter-spacing:.13em;font-size:11px;font-weight:800;color:var(--green);margin:24px 0 15px}.hero h1{font-size:clamp(48px,6.5vw,78px);line-height:1.06;letter-spacing:-.075em;margin:0 0 20px}.hero h1 em{font-style:normal;color:var(--green);white-space:nowrap}.hero p{font-size:16px;max-width:570px;color:#5e6c64;margin:0 0 24px}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:11px 16px;border-radius:11px;border:1px solid var(--line);font-size:13px;font-weight:750;transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer}.btn.primary{background:var(--green-dark);border-color:var(--green-dark);color:white}.btn.secondary{background:white;color:var(--ink)}.btn:hover{transform:translateY(-2px);box-shadow:0 9px 20px #23392d12}
-.hero-art{min-height:390px;position:relative;border:1px solid #d6e0d5;border-radius:25px;background:linear-gradient(145deg,#e5eee5,#f7f5ef 70%);overflow:hidden;padding:22px;isolation:isolate;box-shadow:var(--shadow)}.art-label{display:flex;justify-content:space-between;font-size:10px;letter-spacing:.12em;font-weight:850;color:#66796d}.orbit{position:absolute;width:290px;height:290px;border:1px solid #b6cbb9;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-45%);animation:rotate 40s linear infinite}.orbit:before,.orbit:after{content:"";position:absolute;border:1px solid #c5d5c6;border-radius:50%;inset:35px}.orbit:after{inset:75px}.core{position:absolute;left:50%;top:50%;transform:translate(-50%,-40%);width:132px;height:132px;border-radius:35% 65% 50% 50%;background:var(--green-dark);color:white;display:grid;place-items:center;text-align:center;font-size:23px;font-weight:850;letter-spacing:-.07em;box-shadow:0 18px 40px #29483b30;animation:morph 10s ease-in-out infinite}.node{position:absolute;border-radius:13px;padding:10px 13px;font-size:11px;font-weight:800;box-shadow:0 9px 22px #24382a10;animation:float 5.5s ease-in-out infinite}.n1{background:var(--yellow);top:22%;left:7%}.n2{background:var(--clay);right:6%;top:31%;animation-delay:-2s}.n3{background:var(--lilac);left:17%;bottom:16%;animation-delay:-1s}.n4{background:#fff;right:8%;bottom:17%;animation-delay:-3s}.art-foot{position:absolute;bottom:17px;left:22px;right:22px;display:flex;justify-content:space-between;color:#718077;font-size:10px}
-.quick-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:0 0 18px}.quick-card{background:var(--surface);border:1px solid var(--line);border-radius:17px;padding:17px 19px;display:flex;gap:13px;align-items:center;box-shadow:0 5px 20px #24382a05;transition:.2s}.quick-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.quick-icon{width:42px;height:42px;flex:0 0 42px;display:grid;place-items:center;border-radius:13px;background:var(--sage);font-size:19px}.quick-card:nth-child(2) .quick-icon{background:var(--lilac)}.quick-card:nth-child(3) .quick-icon{background:var(--clay)}.quick-card:nth-child(4) .quick-icon{background:#e7e9d9}.quick-card strong{display:block;font-size:13px}.quick-card small{display:block;font-size:11px;color:var(--muted);margin-top:2px}
-.section{padding:58px 0;border-top:1px solid var(--line)}.head{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:24px}.kicker{font-size:10px;color:var(--green);letter-spacing:.15em;font-weight:850}.head h2{font-size:clamp(28px,3.7vw,42px);letter-spacing:-.06em;line-height:1.12;margin:7px 0 0}.head p{max-width:420px;color:var(--muted);margin:0;font-size:13px}.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:16px}.quote{border-radius:20px;background:var(--green-dark);color:white;padding:27px;min-height:220px;display:flex;flex-direction:column;justify-content:space-between}.quote .big{font-size:25px;line-height:1.38;font-weight:750;letter-spacing:-.04em}.quote small{opacity:.7;font-size:10px;letter-spacing:.12em}.about-copy{border-radius:20px;background:var(--surface);padding:25px;border:1px solid var(--line)}.about-copy p{margin:0 0 13px;color:#5e6b63;font-size:14px}.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}.chip{border:1px solid var(--line);border-radius:99px;padding:6px 10px;font-size:11px;background:#f9fbf8;color:#526359}
-.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.project{background:var(--surface);border:1px solid var(--line);border-radius:19px;padding:20px;min-height:275px;display:flex;flex-direction:column;transition:transform .22s,box-shadow .22s,border-color .22s;cursor:pointer;position:relative;overflow:hidden}.project:after{content:"";position:absolute;width:115px;height:115px;border-radius:50%;right:-52px;top:-52px;background:var(--sage);opacity:.65;transition:transform .3s}.project:nth-child(2):after{background:var(--lilac)}.project:nth-child(3):after{background:var(--clay)}.project:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#bdcec0}.project:hover:after{transform:scale(1.3)}.project .num{display:flex;justify-content:space-between;align-items:center;color:#7a887f;font-size:10px;letter-spacing:.07em;position:relative;z-index:1}.project .symbol{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;font-size:17px;background:var(--sage);color:var(--green-dark)}.project:nth-child(2) .symbol{background:var(--lilac)}.project:nth-child(3) .symbol{background:var(--clay)}.project h3{font-size:19px;line-height:1.35;letter-spacing:-.04em;margin:20px 0 8px;position:relative;z-index:1}.project p{font-size:12px;color:var(--muted);margin:0;position:relative;z-index:1}.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto;padding-top:21px}.tags span{font-size:10px;border-radius:6px;padding:5px 7px;background:#f0f4ef;color:#617267}.project-detail{display:none;margin-top:14px;padding:22px;border-radius:18px;background:var(--surface2);grid-column:1/-1;border:1px solid #d8e2d7}.project-detail.open{display:block;animation:appear .25s ease}.detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.detail-grid h4{margin:0 0 7px;font-size:10px;color:var(--green);text-transform:uppercase;letter-spacing:.1em}.detail-grid p{margin:0;font-size:12px;color:#58685e}
-.side-note{display:flex;align-items:center;gap:18px;margin-top:16px;padding:16px 18px;background:#f8f9f5;border:1px solid var(--line);border-radius:14px;font-size:12px;color:var(--muted)}.side-note-label{flex:0 0 auto;font-size:10px;letter-spacing:.12em;font-weight:850;color:var(--green)}.side-note strong{color:var(--ink)}.side-note a{flex:0 0 auto;color:var(--green-dark);font-weight:750}.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.step{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:19px}.step b{font-size:15px;letter-spacing:-.03em}.step p{font-size:12px;color:var(--muted);margin:8px 0 0}.step:first-child{border-top:3px solid var(--green)}.step:nth-child(2){border-top:3px solid #b5a9c9}.step:nth-child(3){border-top:3px solid #cda48d}
-.twin-section{background:#e4ece4;color:var(--ink);border:1px solid #d2e0d3;border-radius:24px;padding:25px;display:grid;grid-template-columns:.78fr 1.22fr;gap:23px}.twin-intro{padding:14px 8px}.twin-intro h2{font-size:clamp(30px,3.6vw,43px);line-height:1.12;letter-spacing:-.06em;margin:17px 0 13px}.twin-intro p{color:#607168;font-size:13px}.twin-intro .pill{border-color:#cad9cb;color:#3d6350;background:#f7faf5}.chat{background:#fbfcf9;color:var(--ink);border:1px solid #d9e2d8;border-radius:19px;overflow:hidden;display:flex;flex-direction:column;min-height:400px;box-shadow:0 10px 30px #29483b0c}.chat-head{display:flex;align-items:center;gap:11px;padding:15px 17px;border-bottom:1px solid #e2e9e0}.avatar{width:36px;height:36px;border-radius:12px;background:var(--green-dark);color:white;display:grid;place-items:center;font-weight:900;font-size:12px}.chat-head strong{display:block;font-size:13px}.chat-head small{font-size:10px;color:#7c8980}.chat-log{padding:16px;display:flex;flex-direction:column;gap:10px;overflow:auto;min-height:210px;max-height:280px}.msg{max-width:88%;padding:11px 13px;border-radius:13px;font-size:12px;white-space:pre-wrap}.msg.bot{background:white;border:1px solid #e2e9e0;align-self:flex-start;border-top-left-radius:4px}.msg.user{background:var(--green-dark);color:white;align-self:flex-end;border-top-right-radius:4px}.suggestions{display:flex;gap:6px;flex-wrap:wrap;padding:0 15px 13px}.suggestions button{background:#fff;border:1px solid #dbe4da;border-radius:99px;padding:8px 10px;font-size:10px;cursor:pointer;color:#53665a;transition:.2s}.suggestions button:hover{border-color:var(--green);background:#edf4ec}.chat-form{display:flex;gap:7px;padding:11px;border-top:1px solid #e2e9e0}.chat-form input{flex:1;min-width:0;border:1px solid #dbe4da;background:white;border-radius:10px;padding:11px;font-size:12px;outline:none}.chat-form input:focus{border-color:var(--green)}.chat-form button{border:0;border-radius:10px;background:var(--green-dark);color:white;padding:0 14px;cursor:pointer}.note{padding:0 16px 12px;font-size:9px;color:#879289}
-.contact{display:flex;justify-content:space-between;align-items:center;gap:25px;background:#e8e5d3;padding:27px;border-radius:20px;border:1px solid #dddcc8}.contact h2{font-size:clamp(26px,3.4vw,38px);line-height:1.12;letter-spacing:-.05em;margin:8px 0}.contact p{margin:0;color:#5c6b60;font-size:13px}.contact-actions{display:flex;gap:9px;flex-wrap:wrap}.contact .btn{border-color:#c9d2c6}.contact .btn.primary{background:var(--green-dark);color:white}.contact .btn.secondary{background:#f9faf5;color:var(--ink)}footer{padding:24px 0 32px;color:#859087;font-size:10px;display:flex;justify-content:space-between;gap:18px}.modal-back{position:fixed;inset:0;background:#1b2a22b8;z-index:10;display:none;place-items:center;padding:20px}.modal-back.show{display:grid}.modal{max-width:520px;width:100%;background:var(--surface);border-radius:20px;padding:27px;position:relative;box-shadow:0 25px 70px #18291f33}.modal h3{font-size:23px;margin:10px 0}.modal p{color:var(--muted);font-size:13px}.close{position:absolute;right:15px;top:13px;border:0;background:var(--surface2);border-radius:9px;padding:7px 10px;cursor:pointer}
-@keyframes rotate{to{transform:translate(-50%,-45%) rotate(360deg)}}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}@keyframes morph{0%,100%{border-radius:35% 65% 50% 50%}50%{border-radius:58% 42% 42% 58%}}@keyframes appear{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
-@media(max-width:850px){.wrap{width:min(calc(100% - 32px),var(--max))}.hero{grid-template-columns:1fr;gap:18px;padding-top:28px}.hero>div:first-child{padding:16px 0}.hero-art{min-height:350px}.about-grid,.twin-section{grid-template-columns:1fr}.projects{grid-template-columns:1fr 1fr}.side-note{align-items:flex-start;flex-direction:column;gap:6px}.head{align-items:flex-start;flex-direction:column}.timeline{grid-template-columns:1fr}.contact{align-items:flex-start;flex-direction:column}.detail-grid{grid-template-columns:1fr}.navlinks{gap:15px}.quick-strip{gap:9px}.quick-card{padding:13px}}
-@media(max-width:540px){.wrap{width:min(calc(100% - 26px),var(--max))}.nav{height:63px}.navlinks{gap:12px;font-size:10px}.navlinks a:nth-child(1),.navlinks a:nth-child(4){display:none}.hero{padding:22px 0 30px}.hero h1{font-size:clamp(49px,14vw,68px)}.hero p{font-size:14px}.hero-art{min-height:310px;padding:16px}.orbit{width:245px;height:245px}.core{width:112px;height:112px;font-size:20px}.section{padding:43px 0}.head h2{font-size:31px}.about-grid,.projects,.detail-grid,.twin-section,.quick-strip{grid-template-columns:1fr}.quick-card{padding:12px 14px}.quote{min-height:185px}.project{min-height:240px}.twin-section{padding:15px;gap:14px}.twin-intro{padding:6px 4px}.contact{padding:22px}.chat{min-height:400px}footer{flex-direction:column;gap:5px}.actions .btn{font-size:12px;padding:10px 13px}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
-</style></head>
-<body><div class="wrap"><nav class="nav"><a class="brand" href="#top">LX<span>.</span> / PERSONAL</a><div class="navlinks"><a href="#about">关于我</a><a href="#work">项目实践</a><a href="#twin">数字分身</a><a href="https://github.com/Eternity1022" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div></nav>
-<header class="hero" id="top"><div><div class="pill"><i class="dot"></i> CURRENTLY EXPLORING AI × PRODUCT</div><p class="eyebrow" style="margin-top:26px">A PERSONAL SPACE FOR IDEAS & PRACTICE</p><h1>你好，我是<br><em>李昕彤。</em></h1><p>计算机专业背景，正在探索如何把 AI 能力、产品思维与真实业务场景连接起来，让想法变成真正可用的解决方案。</p><div class="actions"><a class="btn primary" href="#work">探索我的经历 <span>↘</span></a><a class="btn secondary" href="#twin">和我的数字分身聊聊 <span>✳</span></a><a class="btn secondary" href="https://github.com/Eternity1022" target="_blank" rel="noopener noreferrer">查看 GitHub ↗</a></div></div><div class="hero-art"><div class="art-label"><span>THINK / BUILD / LEARN</span><span>01—04</span></div><div class="orbit"></div><div class="core">LI<br>XINTONG</div><div class="node n1">AI 应用</div><div class="node n2">PRODUCT</div><div class="node n3">自动化</div><div class="node n4">业务数字化</div><div class="art-foot"><span>技术理解 · 业务洞察</span><span>持续迭代 ↗</span></div></div></header>
-<div class="quick-strip" aria-label="快速了解"><a class="quick-card" href="#about"><span class="quick-icon">✳</span><span><strong>认识李昕彤</strong><small>背景、兴趣与职业方向</small></span></a><a class="quick-card" href="#work"><span class="quick-icon">↗</span><span><strong>项目实践</strong><small>真实问题与解决过程</small></span></a><a class="quick-card" href="#twin"><span class="quick-icon">◌</span><span><strong>数字分身</strong><small>直接提问，进一步了解</small></span></a><a class="quick-card" href="https://github.com/Eternity1022" target="_blank" rel="noopener noreferrer"><span class="quick-icon">⌘</span><span><strong>GitHub 主页</strong><small>查看公开项目与学习记录</small></span></a></div>
-<section class="section" id="about"><div class="head"><div><div class="kicker">01 / ABOUT</div><h2>在技术与真实需求之间，<br>找到值得解决的问题。</h2></div><p>我关注的不只是工具能做什么，更是它适合用在什么场景，以及怎样让方案真正被人使用。</p></div><div class="about-grid"><div class="quote"><div class="big">“技术是手段，<br>解决真实问题才是目的。”</div><small>MY CURRENT PRODUCT BELIEF</small></div><div class="about-copy"><p>我是上海师范大学计算机科学与技术专业的学生。学习和实践中，我逐渐发现自己更享受从需求出发，理解业务流程、梳理问题，再思考技术可以如何参与解决。</p><p>我目前重点探索 AI 产品方向，也在通过企业数字化实践、AI 内容应用和项目经历持续验证自己的想法。我仍在学习，但愿意把每一次尝试做成可复盘、可迭代的经验。</p><div class="chips"><span class="chip">AI 应用</span><span class="chip">产品思维</span><span class="chip">Workflow</span><span class="chip">业务数字化</span><span class="chip">内容表达</span></div></div></div></section>
-<section class="section" id="work"><div class="head"><div><div class="kicker">02 / SELECTED WORK</div><h2>从真实问题出发。</h2></div><p>我更关注真实需求、方案设计和落地验证。点击卡片，看看我具体做了什么、怎么思考。</p></div><div class="projects"><article class="project" data-project="formula" tabindex="0" role="button" aria-label="查看旧配方系统升级项目详情" aria-expanded="false"><div class="num"><span>CASE 01 / DIGITALIZATION</span><span class="symbol">↗</span></div><h3>旧配方系统升级</h3><p>结合石英石生产流程，重新梳理配方管理、权限、计算结果和打印信息。</p><div class="tags"><span>需求梳理</span><span>AI 辅助开发</span><span>流程验证</span></div></article><article class="project" data-project="b2b" tabindex="0" role="button" aria-label="查看 B2B 客户开发工具调研详情" aria-expanded="false"><div class="num"><span>CASE 02 / AUTOMATION</span><span class="symbol">◎</span></div><h3>B2B 客户开发工具调研</h3><p>围绕获取目标企业关键联系人信息的业务需求，调研并试用 Hunter 与 Apollo。</p><div class="tags"><span>工具评估</span><span>业务流程</span><span>自动化探索</span></div></article><article class="project" data-project="education" tabindex="0" role="button" aria-label="查看童趣识图助手项目详情" aria-expanded="false"><div class="num"><span>CASE 03 / AI + EDUCATION</span><span class="symbol">✳</span></div><h3>童趣识图助手</h3><p>围绕儿童识图与学习场景，参与需求拆解、功能设计、数据记录和前后端联调。</p><div class="tags"><span>需求分析</span><span>功能拆解</span><span>AI 应用</span></div></article><div class="project-detail" id="projectDetail" aria-live="polite"><div class="detail-grid"><div><h4>Problem</h4><p id="detailProblem"></p></div><div><h4>My Approach</h4><p id="detailApproach"></p></div><div><h4>Learning</h4><p id="detailLearning"></p></div></div></div></div><div class="side-note"><span class="side-note-label">OTHER PRACTICE</span><span><strong>AI 产品宣传视频</strong>　从脚本构思、数字分身与实景拍摄，到 AI 生成画面整合，探索 AI 内容制作的完整链路。</span><a href="#twin">了解我的实践方式 ↗</a></div></section>
-<section class="section"><div class="head"><div><div class="kicker">03 / HOW I WORK</div><h2>先理解，再设计，持续验证。</h2></div><p>这是我在实践中逐渐形成的工作方式，不是固定公式，而是一套帮助自己把问题想清楚的路径。</p></div><div class="timeline"><div class="step"><b>01 — Understand</b><p>了解用户、业务流程与实际限制，分清表面需求和真正问题。</p></div><div class="step"><b>02 — Design & Build</b><p>拆解功能和数据逻辑，选择合适的工具，借助 AI 提高探索与实现效率。</p></div><div class="step"><b>03 — Validate</b><p>回到真实场景验证结果，根据反馈迭代；不把“做出来”直接等同于“好用”。</p></div></div></section>
-<section class="section" id="twin"><div class="twin-section"><div class="twin-intro"><div class="pill"><i class="dot"></i> DIGITAL TWIN · PREVIEW</div><h2>想了解我？<br>直接问就好。</h2><p>这是我的数字分身体验原型。你可以从我的项目、职业方向和实践方式开始了解我。</p><p style="font-size:12px;color:#9699a2">沟通风格：理性、有逻辑，也尽量保持真诚和亲近感。</p></div><div class="chat"><div class="chat-head"><div class="avatar">LX</div><div><strong>李昕彤 · Digital Twin</strong><small>个人经历问答原型</small></div></div><div class="chat-log" id="chatLog" role="log" aria-live="polite" aria-label="数字分身对话记录"><div class="msg bot">你好，很高兴你来了解我。你可以问我做过什么项目、为什么关注 AI 产品，或者我在项目中是怎么思考和解决问题的。</div></div><div class="suggestions"><button data-q="你目前在做什么？">你目前在做什么？</button><button data-q="介绍一下配方系统升级项目">配方系统升级</button><button data-q="为什么想做 AI 产品经理？">为什么做 AI 产品？</button><button data-q="你有哪些 AI 应用实践？">AI 应用实践</button></div><form class="chat-form" id="chatForm"><input id="chatInput" placeholder="试着问我一个问题…" autocomplete="off"><button type="submit">发送 ↗</button></form><div class="note">当前为本地交互演示，回答来自预设知识库，不代表已接入在线大模型。</div></div></div></section>
-<section class="section" id="contact"><div class="contact"><div><div class="kicker" style="color:#4c5c50">04 / KEEP IN TOUCH</div><h2>有想法，就继续聊聊。</h2><p>欢迎交流 AI 应用、产品实践与实习机会。</p></div><div class="contact-actions"><a class="btn primary" href="#twin">先和数字分身聊聊 ↗</a><button class="btn secondary" id="resumeBtn">简历信息说明</button></div></div></section><footer><span>© 2026 李昕彤 · Personal Homepage</span><a href="https://github.com/Eternity1022" target="_blank" rel="noopener noreferrer">GitHub · @Eternity1022 ↗</a><span>Built with curiosity, iterated with feedback.</span></footer></div>
-<div class="modal-back" id="modal"><div class="modal"><button class="close" id="closeModal">✕</button><div class="kicker">RESUME</div><h3>简历与联系方式</h3><p>你可以先通过 GitHub 查看我的公开项目。正式发布前，我还会补充可公开的简历 PDF 或邮箱；这里不会直接展示手机号等私人联系方式。</p><p><a class="btn secondary" href="https://github.com/Eternity1022" target="_blank" rel="noopener noreferrer">打开 GitHub 主页 ↗</a></p><button class="btn primary" id="modalOk">明白了</button></div></div>
+:root{
+  --bg:#f3f5f1;--surface:#ffffff;--surface2:#e9eee8;--ink:#202b27;--muted:#6f7c75;
+  --line:#dce4dc;--green:#557a68;--green-dark:#29483b;--sage:#d8e3d8;--lilac:#e6e1ee;
+  --clay:#ead5c9;--yellow:#e9e5c9;--shadow:0 16px 45px #263d3010;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);overflow:hidden;
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  line-height:1.6;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid #88a995;outline-offset:2px}
+
+/* ===== 应用外壳：三栏，固定一屏 ===== */
+.app{
+  display:grid;grid-template-columns:230px 1fr 400px;
+  height:100vh;height:100dvh;
+}
+
+/* ===== 左侧导航 ===== */
+.sidebar{
+  background:#eef2ec;border-right:1px solid var(--line);
+  display:flex;flex-direction:column;padding:22px 16px;gap:6px;
+}
+.brand{font-size:16px;font-weight:850;letter-spacing:-.04em;padding:2px 12px 18px;border-bottom:1px solid var(--line);margin-bottom:12px}
+.brand span{color:var(--green)}
+.brand small{display:block;font-size:10px;color:var(--muted);font-weight:600;letter-spacing:.12em;margin-top:3px}
+.nav-btn{
+  display:flex;align-items:center;gap:11px;width:100%;text-align:left;
+  border:1px solid transparent;background:transparent;border-radius:12px;
+  padding:12px 12px;font-size:13px;font-weight:700;color:var(--muted);
+  transition:.15s;
+}
+.nav-btn .ic{width:30px;height:30px;flex:0 0 30px;display:grid;place-items:center;border-radius:9px;background:var(--surface);border:1px solid var(--line);font-size:14px}
+.nav-btn:hover{color:var(--ink);background:#e3e9e1}
+.nav-btn.active{background:var(--green-dark);color:#fff;border-color:var(--green-dark)}
+.nav-btn.active .ic{background:#3a5b4c;border-color:#3a5b4c}
+.sidebar .spacer{flex:1}
+.side-foot{font-size:10px;color:var(--muted);padding:10px 12px;border-top:1px solid var(--line);line-height:1.7}
+.side-foot a{color:var(--green-dark);font-weight:750}
+.chat-toggle{display:none}
+
+/* ===== 中间内容区 ===== */
+.main{overflow:hidden;display:flex;flex-direction:column;position:relative}
+.panel{display:none;flex-direction:column;height:100%;padding:34px 38px 28px;overflow:auto}
+.panel.active{display:flex}
+.panel-head{margin-bottom:20px;flex:0 0 auto}
+.kicker{font-size:10px;color:var(--green);letter-spacing:.15em;font-weight:850}
+.panel-head h2{font-size:clamp(24px,2.6vw,34px);letter-spacing:-.05em;line-height:1.15;margin:8px 0 0}
+.panel-head p{max-width:560px;color:var(--muted);margin:8px 0 0;font-size:13px}
+
+/* 关于我 */
+.about-body{display:grid;grid-template-columns:1fr 1fr;gap:16px;flex:1;min-height:0}
+.about-left{display:flex;flex-direction:column;gap:16px;min-height:0}
+.intro-card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;flex:1}
+.me{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.me-avatar{width:84px;height:84px;border-radius:50%;object-fit:cover;border:3px solid #fff;box-shadow:0 8px 22px #29483b24;flex:0 0 84px;background:var(--surface2)}
+.me-name{font-size:19px;font-weight:850;letter-spacing:-.03em}
+.me-name span{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.02em}
+.me-sub{font-size:12px;color:var(--muted);margin-top:2px}
+.intro-card .hello{font-size:clamp(34px,3.6vw,46px);line-height:1.08;letter-spacing:-.05em;margin:6px 0 14px}
+.intro-card .hello em{font-style:normal;color:var(--green)}
+.intro-card p{font-size:13.5px;color:#5e6c64;margin:0}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.chip{border:1px solid var(--line);border-radius:99px;padding:6px 11px;font-size:11px;background:#f9fbf8;color:#526359}
+.quote{background:var(--green-dark);color:#fff;border-radius:20px;padding:24px;display:flex;flex-direction:column;justify-content:space-between;min-height:150px}
+.quote .big{font-size:21px;line-height:1.4;font-weight:750;letter-spacing:-.03em}
+.quote small{opacity:.7;font-size:10px;letter-spacing:.12em;margin-top:12px}
+.about-copy{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;font-size:13px;color:#5e6b63;display:flex;flex-direction:column;justify-content:center}
+.about-copy p{margin:0 0 12px}
+.about-copy p:last-child{margin:0}
+.about-copy strong{color:var(--green-dark)}
+
+/* 项目实践 */
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;flex:0 0 auto}
+.project{background:var(--surface);border:1px solid var(--line);border-radius:17px;padding:18px;display:flex;flex-direction:column;cursor:pointer;transition:.18s;position:relative;overflow:hidden}
+.project:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#bdcec0}
+.project.selected{border-color:var(--green);box-shadow:0 0 0 1px var(--green) inset}
+.project .num{display:flex;justify-content:space-between;align-items:center;color:#7a887f;font-size:9.5px;letter-spacing:.07em}
+.project .symbol{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;font-size:16px;background:var(--sage);color:var(--green-dark)}
+.project:nth-child(2) .symbol{background:var(--lilac)}
+.project:nth-child(3) .symbol{background:var(--clay)}
+.project h3{font-size:17px;letter-spacing:-.03em;margin:16px 0 7px}
+.project p{font-size:11.5px;color:var(--muted);margin:0}
+.tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:auto;padding-top:16px}
+.tags span{font-size:9.5px;border-radius:6px;padding:4px 6px;background:#f0f4ef;color:#617267}
+.detail{flex:1;min-height:0;margin-top:14px;background:var(--surface2);border:1px solid #d8e2d7;border-radius:17px;padding:22px;display:none;overflow:auto}
+.detail.open{display:block;animation:appear .22s ease}
+.detail .hint{color:var(--muted);font-size:12px}
+.detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.detail-grid h4{margin:0 0 8px;font-size:10px;color:var(--green);text-transform:uppercase;letter-spacing:.1em}
+.detail-grid p{margin:0;font-size:12px;color:#58685e;line-height:1.7}
+
+/* 工作方式 */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;flex:1;align-content:start}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;display:flex;flex-direction:column}
+.step .big{font-size:15px;letter-spacing:-.03em;font-weight:800}
+.step p{font-size:12.5px;color:var(--muted);margin:12px 0 0}
+.step .tag{margin-top:auto;padding-top:22px;font-size:10px;color:var(--green);letter-spacing:.1em;font-weight:800}
+.step:nth-child(1){border-top:3px solid var(--green)}
+.step:nth-child(2){border-top:3px solid #b5a9c9}
+.step:nth-child(3){border-top:3px solid #cda48d}
+
+/* 联系方式 */
+.contact-wrap{flex:1;display:flex;flex-direction:column;gap:16px}
+.contact-card{background:var(--green-dark);color:#fff;border-radius:20px;padding:34px;flex:1;display:flex;flex-direction:column;justify-content:center}
+.contact-card h2{font-size:clamp(26px,3vw,38px);letter-spacing:-.05em;margin:10px 0 14px}
+.contact-card p{color:#c9d8cd;font-size:13px;margin:0}
+.contact-card .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 17px;border-radius:11px;border:1px solid var(--line);font-size:13px;font-weight:750;transition:.15s;background:#fff;color:var(--ink)}
+.btn.primary{background:var(--green-dark);border-color:var(--green-dark);color:#fff}
+.btn.ghost{background:transparent;border-color:#5d7f6e;color:#fff}
+.btn.ghost:hover{background:#35594a}
+.contact-card .btn.primary{background:#fff;border-color:#fff;color:var(--green-dark)}
+.contact-note{font-size:11px;color:var(--muted);padding:0 4px}
+
+/* ===== 右侧数字分身聊天 ===== */
+.chat-col{display:flex;flex-direction:column;background:#e4ece4;border-left:1px solid #d2e0d3;min-height:0}
+.chat-head{display:flex;align-items:center;gap:12px;padding:20px 20px 16px;flex:0 0 auto}
+.avatar{width:44px;height:44px;border-radius:14px;background:var(--green-dark);color:#fff;display:grid;place-items:center;font-weight:900;font-size:14px;box-shadow:0 8px 18px #29483b30;overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.chat-head strong{display:block;font-size:15px;letter-spacing:-.02em}
+.chat-head small{font-size:10px;color:#6d7f73}
+.chat-head .status{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-size:10px;color:#4f6f5c;background:#f3f8f2;border:1px solid #cfe0d1;padding:4px 9px;border-radius:99px}
+.chat-head .dot{width:7px;height:7px;background:#6c9c7c;border-radius:50%;box-shadow:0 0 0 3px #6c9c7c22}
+.chat-log{flex:1;min-height:0;padding:8px 18px;display:flex;flex-direction:column;gap:10px;overflow:auto}
+.msg{max-width:90%;padding:12px 14px;border-radius:14px;font-size:12.5px;line-height:1.6;white-space:pre-wrap;word-break:break-word}
+.msg.bot{background:#fff;border:1px solid #dbe4da;align-self:flex-start;border-top-left-radius:4px}
+.msg.user{background:var(--green-dark);color:#fff;align-self:flex-end;border-top-right-radius:4px}
+.suggestions{display:flex;gap:6px;flex-wrap:wrap;padding:14px 18px 4px;flex:0 0 auto}
+.suggestions button{background:#fff;border:1px solid #dbe4da;border-radius:99px;padding:8px 11px;font-size:10.5px;color:#53665a;transition:.15s}
+.suggestions button:hover{border-color:var(--green);background:#edf4ec}
+.chat-form{display:flex;gap:8px;padding:14px 18px 16px;border-top:1px solid #d8e2d8;flex:0 0 auto;background:#eef4ec}
+.chat-form input{flex:1;min-width:0;border:1px solid #dbe4da;background:#fff;border-radius:11px;padding:12px 13px;font-size:12.5px;outline:none}
+.chat-form input:focus{border-color:var(--green)}
+.chat-form button{border:0;border-radius:11px;background:var(--green-dark);color:#fff;padding:0 16px;font-weight:750}
+.chat-note{padding:0 18px 14px;font-size:9px;color:#879289;flex:0 0 auto}
+
+/* 弹窗 */
+.modal-back{position:fixed;inset:0;background:#1b2a22b8;z-index:50;display:none;place-items:center;padding:20px}
+.modal-back.show{display:grid}
+.modal{max-width:520px;width:100%;background:var(--surface);border-radius:20px;padding:28px;position:relative;box-shadow:0 25px 70px #18291f33}
+.modal h3{font-size:23px;margin:10px 0}
+.modal p{color:var(--muted);font-size:13px}
+.close{position:absolute;right:15px;top:13px;border:0;background:var(--surface2);border-radius:9px;padding:7px 10px}
+
+@keyframes appear{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+/* 响应式：窄屏收成顶部导航 + 全屏聊天抽屉 */
+@media(max-width:980px){
+  .app{grid-template-columns:1fr;grid-template-rows:auto 1fr}
+  .sidebar{flex-direction:row;align-items:center;gap:6px;padding:10px 12px;border-right:0;border-bottom:1px solid var(--line);overflow-x:auto}
+  .brand{border:0;margin:0;padding:0 10px 0 0;flex:0 0 auto}
+  .brand small{display:none}
+  .nav-btn{width:auto;flex:0 0 auto;padding:9px 11px;font-size:12px}
+  .nav-btn .ic{display:none}
+  .sidebar .spacer{display:none}
+  .side-foot{display:none}
+  .chat-toggle{display:inline-flex;align-items:center;gap:7px;flex:0 0 auto;margin-left:auto;border:0;background:var(--green-dark);color:#fff;border-radius:11px;padding:9px 13px;font-size:12px;font-weight:750}
+  .main{grid-row:2}
+  .panel{padding:22px 18px 18px}
+  .about-body,.projects,.steps,.detail-grid{grid-template-columns:1fr}
+  .chat-col{position:fixed;inset:0;z-index:40;transform:translateX(100%);transition:.25s;border-left:0}
+  .chat-col.open{transform:translateX(0)}
+  .chat-head .close{position:static}
+}
+</style>
+</head>
+<body>
+<div class="app">
+
+  <!-- 左侧导航 -->
+  <aside class="sidebar">
+    <div class="brand">LX<span>.</span> / PERSONAL<small>AI × PRODUCT</small></div>
+    <button class="nav-btn active" data-panel="about"><span class="ic">✳</span>关于我</button>
+    <button class="nav-btn" data-panel="work"><span class="ic">↗</span>项目实践</button>
+    <button class="nav-btn" data-panel="how"><span class="ic">◌</span>工作方式</button>
+    <button class="nav-btn" data-panel="contact"><span class="ic">⌘</span>联系方式</button>
+    <div class="spacer"></div>
+    <button class="chat-toggle" id="chatToggle">💬 数字分身</button>
+    <div class="side-foot">GitHub<br><a href="https://github.com/Eternity1022" target="_blank" rel="noopener noreferrer">@Eternity1022 ↗</a></div>
+  </aside>
+
+  <!-- 中间内容区 -->
+  <main class="main">
+
+    <section class="panel active" id="panel-about" aria-label="关于我">
+      <div class="panel-head">
+        <div class="kicker">01 / ABOUT</div>
+        <h2>你好，我是李昕彤。</h2>
+        <p>计算机专业背景，正在探索如何把 AI 能力、产品思维与真实业务场景连接起来。</p>
+      </div>
+      <div class="about-body">
+        <div class="about-left">
+          <div class="intro-card">
+            <div class="me">
+              <img class="me-avatar" src="assets/avatar.png" alt="李昕彤的头像">
+              <div class="me-info">
+                <div class="me-name">李昕彤 <span>Li Xintong</span></div>
+                <div class="me-sub">上海师范大学 · 计算机科学与技术 · 探索 AI 产品方向</div>
+              </div>
+            </div>
+            <div class="kicker">CURRENTLY EXPLORING AI × PRODUCT</div>
+            <div class="hello">在技术与真实需求之间，<br><em>找到值得解决的问题。</em></div>
+            <p>我关注的不只是工具能做什么，更是它适合用在什么场景，以及怎样让方案真正被人使用。</p>
+            <div class="chips"><span class="chip">AI 应用</span><span class="chip">产品思维</span><span class="chip">Workflow</span><span class="chip">业务数字化</span><span class="chip">内容表达</span></div>
+          </div>
+          <div class="quote"><div class="big">“技术是手段，<br>解决真实问题才是目的。”</div><small>MY CURRENT PRODUCT BELIEF</small></div>
+        </div>
+        <div class="about-copy">
+          <p>我是<strong>上海师范大学计算机科学与技术专业</strong>的学生。学习和实践中，我逐渐发现自己更享受从需求出发，理解业务流程、梳理问题，再思考技术可以如何参与解决。</p>
+          <p>我目前重点探索 <strong>AI 产品方向</strong>，也在通过企业数字化实践、AI 内容应用和项目经历持续验证自己的想法。我仍在学习，但愿意把每一次尝试做成可复盘、可迭代的经验。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-work" aria-label="项目实践">
+      <div class="panel-head">
+        <div class="kicker">02 / SELECTED WORK</div>
+        <h2>从真实问题出发。</h2>
+        <p>点击下方卡片查看详情，了解我具体做了什么、怎么思考。</p>
+      </div>
+      <div class="projects">
+        <article class="project" data-project="formula" tabindex="0" role="button" aria-expanded="false">
+          <div class="num"><span>CASE 01 / DIGITALIZATION</span><span class="symbol">↗</span></div>
+          <h3>旧配方系统升级</h3>
+          <p>结合石英石生产流程，重新梳理配方管理、权限、计算结果和打印信息。</p>
+          <div class="tags"><span>需求梳理</span><span>AI 辅助开发</span><span>流程验证</span></div>
+        </article>
+        <article class="project" data-project="b2b" tabindex="0" role="button" aria-expanded="false">
+          <div class="num"><span>CASE 02 / AUTOMATION</span><span class="symbol">◎</span></div>
+          <h3>B2B 客户开发工具调研</h3>
+          <p>围绕获取目标企业关键联系人信息的业务需求，调研并试用 Hunter 与 Apollo。</p>
+          <div class="tags"><span>工具评估</span><span>业务流程</span><span>自动化探索</span></div>
+        </article>
+        <article class="project" data-project="education" tabindex="0" role="button" aria-expanded="false">
+          <div class="num"><span>CASE 03 / AI + EDUCATION</span><span class="symbol">✳</span></div>
+          <h3>童趣识图助手</h3>
+          <p>围绕儿童识图与学习场景，参与需求拆解、功能设计、数据记录和前后端联调。</p>
+          <div class="tags"><span>需求分析</span><span>功能拆解</span><span>AI 应用</span></div>
+        </article>
+      </div>
+      <div class="detail" id="projectDetail" aria-live="polite">
+        <p class="hint">↑ 点击上方任意项目卡片，查看它的 Problem / Approach / Learning。</p>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-how" aria-label="工作方式">
+      <div class="panel-head">
+        <div class="kicker">03 / HOW I WORK</div>
+        <h2>先理解，再设计，持续验证。</h2>
+        <p>不是固定公式，而是一套帮助自己把问题想清楚的路径。</p>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="big">01 — Understand</div><p>了解用户、业务流程与实际限制，分清表面需求和真正问题。</p><div class="tag">理解需求</div></div>
+        <div class="step"><div class="big">02 — Design &amp; Build</div><p>拆解功能和数据逻辑，选择合适的工具，借助 AI 提高探索与实现效率。</p><div class="tag">设计实现</div></div>
+        <div class="step"><div class="big">03 — Validate</div><p>回到真实场景验证结果，根据反馈迭代；不把“做出来”直接等同于“好用”。</p><div class="tag">持续验证</div></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-contact" aria-label="联系方式">
+      <div class="panel-head">
+        <div class="kicker">04 / KEEP IN TOUCH</div>
+        <h2>有想法，就继续聊聊。</h2>
+      </div>
+      <div class="contact-wrap">
+        <div class="contact-card">
+          <h2>欢迎交流 AI 应用、产品实践与实习机会。</h2>
+          <p>你可以先和右侧的数字分身聊聊，或者直接打开我的 GitHub 查看公开项目。</p>
+          <div class="links">
+            <button class="btn primary" id="resumeBtn">简历信息说明</button>
+            <a class="btn ghost" href="https://github.com/Eternity1022" target="_blank" rel="noopener noreferrer">打开 GitHub 主页 ↗</a>
+          </div>
+        </div>
+        <p class="contact-note">© 2026 李昕彤 · Personal Homepage　·　Built with curiosity, iterated with feedback.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 右侧数字分身聊天 -->
+  <aside class="chat-col" id="chatCol" aria-label="数字分身对话">
+    <div class="chat-head">
+      <div class="avatar"><img src="assets/avatar.png" alt="李昕彤头像"></div>
+      <div><strong>李昕彤 · Digital Twin</strong><small>个人经历问答原型</small></div>
+      <span class="status"><i class="dot"></i>在线</span>
+      <button class="close" id="chatClose" style="display:none">✕</button>
+    </div>
+    <div class="chat-log" id="chatLog" role="log" aria-live="polite">
+      <div class="msg bot">你好，很高兴你来了解我。你可以问我做过什么项目、为什么关注 AI 产品，或者我在项目中是怎么思考和解决问题的。</div>
+    </div>
+    <div class="suggestions">
+      <button data-q="你目前在做什么？">你目前在做什么？</button>
+      <button data-q="介绍一下配方系统升级项目">配方系统升级</button>
+      <button data-q="为什么想做 AI 产品经理？">为什么做 AI 产品？</button>
+      <button data-q="你有哪些 AI 应用实践？">AI 应用实践</button>
+    </div>
+    <form class="chat-form" id="chatForm">
+      <input id="chatInput" placeholder="试着问我一个问题…" autocomplete="off">
+      <button type="submit">发送 ↗</button>
+    </form>
+    <div class="chat-note">当前为本地交互演示，回答来自预设知识库，不代表已接入在线大模型。</div>
+  </aside>
+
+</div>
+
+<!-- 简历弹窗 -->
+<div class="modal-back" id="modal">
+  <div class="modal">
+    <button class="close" id="closeModal">✕</button>
+    <div class="kicker">RESUME</div>
+    <h3>简历与联系方式</h3>
+    <p>你可以先通过 GitHub 查看我的公开项目。正式发布前，我还会补充可公开的简历 PDF 或邮箱；这里不会直接展示手机号等私人联系方式。</p>
+    <p><a class="btn primary" href="https://github.com/Eternity1022" target="_blank" rel="noopener noreferrer">打开 GitHub 主页 ↗</a></p>
+    <button class="btn secondary" id="modalOk">明白了</button>
+  </div>
+</div>
+
 <script>
-const details={formula:{problem:'旧系统使用时间较久，打印结果有信息冗余，也有生产需要的关键信息展示不足；员工还要人工审核和修改。',approach:'沟通生产部门与技术人员，梳理字段、配方数据和计算逻辑，重新设计权限、配方新建/查询及打印布局，并利用 AI 辅助实现和反复修改。新旧系统先并行核对，由技术主管确认数据一致后逐步过渡。',learning:'生产系统不只是界面和代码。数据准确、打印信息适配现场、变更过程可验证，都决定了系统是否真正好用。新系统逐步投入使用，反馈整体较好。'},b2b:{problem:'业务部门希望从目标客户官网进一步找到企业内部关键联系人的联系方式，减少纯手工搜索的负担。',approach:'先围绕需求搜索解决方案，再实际试用和比较工具，筛选出 Hunter 与 Apollo 作为值得进一步使用的工具，并了解其邮件追踪、工作流等功能。',learning:'工具选择应该从业务目标和实际使用效果出发；工具本身不是成果，能否融入流程、是否适合团队才是关键。'},education:{problem:'项目希望将图像识别能力融入儿童学习场景，需要把较宽泛的想法拆成可实现、可使用的功能。',approach:'参与需求与功能拆解，梳理识别记录存储、数据接口和数据库相关流程，并配合前端联调、测试与文档整理。',learning:'AI 应用不只是模型能力，还需要清晰的用户场景、完整的数据流和可理解的交互。项目获校级三等奖，并入选国家级大学生创新创业训练计划。'}};
-function openProject(card){const panel=document.getElementById('projectDetail');const wasOpen=card.getAttribute('aria-expanded')==='true';if(wasOpen){panel.classList.remove('open');card.setAttribute('aria-expanded','false');return}const d=details[card.dataset.project];if(!d)return;document.getElementById('detailProblem').textContent=d.problem;document.getElementById('detailApproach').textContent=d.approach;document.getElementById('detailLearning').textContent=d.learning;panel.classList.add('open');document.querySelectorAll('[data-project]').forEach(c=>c.setAttribute('aria-expanded',String(c===card)));panel.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'nearest'})}document.querySelectorAll('[data-project]').forEach(card=>{card.addEventListener('click',()=>openProject(card));card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openProject(card)}})});
-const answers=[{keys:['目前在做什么','做什么','介绍一下你','你是谁','个人介绍','背景'],answer:'我是上海师范大学计算机科学与技术专业的学生，目前重点探索 AI 产品方向。之前在企业实践中接触了旧配方系统升级、B2B 客户开发工具调研和 AI 产品宣传视频，也参与过童趣识图助手项目。我希望继续把技术理解、业务需求和产品设计连接起来。'},{keys:['配方','系统升级','泺华','石英石'],answer:'这个项目来自石英石生产现场。旧系统的打印界面有些信息冗余，关键数据展示也不够适配生产需要，员工还要人工复核和修改。我和相关人员沟通实际流程、数据字段、计算逻辑和打印布局，利用 AI 辅助完成新系统，并根据反馈持续修改。过渡阶段先让技术主管核对新旧系统结果，确认一致后再用于生产。新系统逐步开始使用，反馈整体不错。'},{keys:['为什么','产品经理','职业方向','ai产品','职业规划','转产品'],answer:'我认为 AI 正在改变软件的开发与应用方式。计算机专业让我能理解一定的技术逻辑，而在项目和实习中，我逐渐发现自己更享受从真实问题出发，梳理需求、设计流程，再思考技术怎样创造用户价值。所以我把 AI 产品经理作为重点探索方向；我仍在积累经验，也希望通过真实项目持续验证和提升自己。'},{keys:['项目','做过什么','项目经历','成果','实践经历'],answer:'我想重点介绍三类经历：第一，围绕石英石生产现场升级旧配方系统，梳理需求、权限、计算结果和打印流程；第二，针对 B2B 业务需求调研并试用 Hunter、Apollo 等工具；第三，参与童趣识图助手项目，接触需求拆解、数据流和前后端联调。此外还做过 AI 产品宣传视频。它们让我从不同角度理解了技术怎样进入真实业务。'},{keys:['ai应用','视频','hunter','apollo','客户','工具','识图','教育'],answer:'我目前有几类实践：一是结合生产流程升级配方系统；二是针对 B2B 业务需求，调研并试用 Hunter、Apollo 等工具，了解联系人信息搜索、邮件追踪与工作流能力；三是参与童趣识图助手项目，接触需求拆解、数据流和前后端联调；此外也做过 AI 产品宣传视频。我更关注工具如何解决具体问题，而不只是工具本身。'},{keys:['优势','擅长','优点','能力'],answer:'现阶段我比较愿意投入的部分，是把比较模糊的需求拆成具体问题和流程，主动和使用者沟通，再借助合适的工具快速尝试并验证。我也在持续补足技术基础和项目方法，希望让自己的判断不只停留在想法层面。'},{keys:['不足','缺点','不擅长','需要提升','短板'],answer:'我还在积累阶段，计算机专业基础和系统化的产品方法都需要继续加强。遇到不熟悉的问题时，我会先拆解任务、查资料并借助 AI 辅助探索，再尽量通过实际结果核对，而不是直接把生成的内容当成正确答案。'},{keys:['技术','代码','开发'],answer:'我的专业背景是计算机科学与技术，也接触过 C、Java、数据库和数据结构等课程。在实践中，我会借助 AI 辅助实现，但也需要自己理解业务逻辑、梳理功能、验证数据和根据反馈修改。我目前更想发展的是技术理解与产品能力结合的方向，同时继续补足技术基础。'},{keys:['联系','邮箱','合作'],answer:'欢迎交流 AI 应用、产品实践或实习机会。这个原型还没有放入公开联系方式；正式发布前可以在这里添加你愿意公开的邮箱、GitHub 主页或简历链接。'}];
-function reply(q){const lower=q.toLowerCase();const found=answers.find(a=>a.keys.some(k=>lower.includes(k.toLowerCase())));return found?found.answer:'这个问题目前还没有写进我的个人知识库。我不想在不了解事实的情况下随意编造。你可以继续问我关于项目经历、AI 应用实践或职业方向的问题；后续也可以补充更多真实经历，让数字分身回答得更完整。'}
-function send(q){q=q.trim();if(!q)return;const log=document.getElementById('chatLog');const u=document.createElement('div');u.className='msg user';u.textContent=q;log.appendChild(u);const b=document.createElement('div');b.className='msg bot';b.textContent=reply(q);log.appendChild(b);log.scrollTop=log.scrollHeight;document.getElementById('chatInput').value=''}
-document.getElementById('chatForm').addEventListener('submit',e=>{e.preventDefault();send(document.getElementById('chatInput').value)});document.querySelectorAll('[data-q]').forEach(b=>b.addEventListener('click',()=>send(b.dataset.q)));const modal=document.getElementById('modal');document.getElementById('resumeBtn').onclick=()=>modal.classList.add('show');document.getElementById('closeModal').onclick=()=>modal.classList.remove('show');document.getElementById('modalOk').onclick=()=>modal.classList.remove('show');modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('show')});document.addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('show')});
-</script></body></html>
+/* ===== 导航切换 ===== */
+const navBtns = document.querySelectorAll('.nav-btn');
+const panels = document.querySelectorAll('.panel');
+function switchPanel(id){
+  navBtns.forEach(b=>b.classList.toggle('active', b.dataset.panel===id));
+  panels.forEach(p=>p.classList.toggle('active', p.id==='panel-'+id));
+}
+navBtns.forEach(b=>b.addEventListener('click', ()=>switchPanel(b.dataset.panel)));
+
+/* ===== 项目详情 ===== */
+const details={
+  formula:{problem:'旧系统使用时间较久，打印结果有信息冗余，也有生产需要的关键信息展示不足；员工还要人工审核和修改。',approach:'沟通生产部门与技术人员，梳理字段、配方数据和计算逻辑，重新设计权限、配方新建/查询及打印布局，并利用 AI 辅助实现和反复修改。新旧系统先并行核对，由技术主管确认数据一致后逐步过渡。',learning:'生产系统不只是界面和代码。数据准确、打印信息适配现场、变更过程可验证，都决定了系统是否真正好用。新系统逐步投入使用，反馈整体较好。'},
+  b2b:{problem:'业务部门希望从目标客户官网进一步找到企业内部关键联系人的联系方式，减少纯手工搜索的负担。',approach:'先围绕需求搜索解决方案，再实际试用和比较工具，筛选出 Hunter 与 Apollo 作为值得进一步使用的工具，并了解其邮件追踪、工作流等功能。',learning:'工具选择应该从业务目标和实际使用效果出发；工具本身不是成果，能否融入流程、是否适合团队才是关键。'},
+  education:{problem:'项目希望将图像识别能力融入儿童学习场景，需要把较宽泛的想法拆成可实现、可使用的功能。',approach:'参与需求与功能拆解，梳理识别记录存储、数据接口和数据库相关流程，并配合前端联调、测试与文档整理。',learning:'AI 应用不只是模型能力，还需要清晰的用户场景、完整的数据流和可理解的交互。项目获校级三等奖，并入选国家级大学生创新创业训练计划。'}
+};
+const cards=document.querySelectorAll('.project');
+const detailPanel=document.getElementById('projectDetail');
+function openProject(card){
+  const d=details[card.dataset.project];if(!d)return;
+  const wasOpen=card.getAttribute('aria-expanded')==='true';
+  cards.forEach(c=>{c.classList.remove('selected');c.setAttribute('aria-expanded','false')});
+  if(wasOpen){detailPanel.classList.remove('open');return;}
+  card.classList.add('selected');card.setAttribute('aria-expanded','true');
+  detailPanel.innerHTML=
+    '<div class="detail-grid">'+
+    '<div><h4>Problem</h4><p>'+d.problem+'</p></div>'+
+    '<div><h4>My Approach</h4><p>'+d.approach+'</p></div>'+
+    '<div><h4>Learning</h4><p>'+d.learning+'</p></div>'+
+    '</div>';
+  detailPanel.classList.add('open');
+}
+cards.forEach(card=>{
+  card.addEventListener('click',()=>openProject(card));
+  card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openProject(card)}});
+});
+
+/* ===== 数字分身问答 ===== */
+const answers=[
+  {keys:['目前在做什么','做什么','介绍一下你','你是谁','个人介绍','背景'],answer:'我是上海师范大学计算机科学与技术专业的学生，目前重点探索 AI 产品方向。之前在企业实践中接触了旧配方系统升级、B2B 客户开发工具调研和 AI 产品宣传视频，也参与过童趣识图助手项目。我希望继续把技术理解、业务需求和产品设计连接起来。'},
+  {keys:['配方','系统升级','泺华','石英石'],answer:'这个项目来自石英石生产现场。旧系统的打印界面有些信息冗余，关键数据展示也不够适配生产需要，员工还要人工复核和修改。我和相关人员沟通实际流程、数据字段、计算逻辑和打印布局，利用 AI 辅助完成新系统，并根据反馈持续修改。过渡阶段先让技术主管核对新旧系统结果，确认一致后再用于生产。新系统逐步开始使用，反馈整体不错。'},
+  {keys:['为什么','产品经理','职业方向','ai产品','职业规划','转产品'],answer:'我认为 AI 正在改变软件的开发与应用方式。计算机专业让我能理解一定的技术逻辑，而在项目和实习中，我逐渐发现自己更享受从真实问题出发，梳理需求、设计流程，再思考技术怎样创造用户价值。所以我把 AI 产品经理作为重点探索方向；我仍在积累经验，也希望通过真实项目持续验证和提升自己。'},
+  {keys:['项目','做过什么','项目经历','成果','实践经历'],answer:'我想重点介绍三类经历：第一，围绕石英石生产现场升级旧配方系统，梳理需求、权限、计算结果和打印流程；第二，针对 B2B 业务需求调研并试用 Hunter、Apollo 等工具；第三，参与童趣识图助手项目，接触需求拆解、数据流和前后端联调。此外还做过 AI 产品宣传视频。它们让我从不同角度理解了技术怎样进入真实业务。'},
+  {keys:['ai应用','视频','hunter','apollo','客户','工具','识图','教育'],answer:'我目前有几类实践：一是结合生产流程升级配方系统；二是针对 B2B 业务需求，调研并试用 Hunter、Apollo 等工具，了解联系人信息搜索、邮件追踪与工作流能力；三是参与童趣识图助手项目，接触需求拆解、数据流和前后端联调；此外也做过 AI 产品宣传视频。我更关注工具如何解决具体问题，而不只是工具本身。'},
+  {keys:['优势','擅长','优点','能力'],answer:'现阶段我比较愿意投入的部分，是把比较模糊的需求拆成具体问题和流程，主动和使用者沟通，再借助合适的工具快速尝试并验证。我也在持续补足技术基础和项目方法，希望让自己的判断不只停留在想法层面。'},
+  {keys:['不足','缺点','不擅长','需要提升','短板'],answer:'我还在积累阶段，计算机专业基础和系统化的产品方法都需要继续加强。遇到不熟悉的问题时，我会先拆解任务、查资料并借助 AI 辅助探索，再尽量通过实际结果核对，而不是直接把生成的内容当成正确答案。'},
+  {keys:['技术','代码','开发'],answer:'我的专业背景是计算机科学与技术，也接触过 C、Java、数据库和数据结构等课程。在实践中，我会借助 AI 辅助实现，但也需要自己理解业务逻辑、梳理功能、验证数据和根据反馈修改。我目前更想发展的是技术理解与产品能力结合的方向，同时继续补足技术基础。'},
+  {keys:['联系','邮箱','合作'],answer:'欢迎交流 AI 应用、产品实践或实习机会。这个原型还没有放入公开联系方式；正式发布前可以在这里添加你愿意公开的邮箱、GitHub 主页或简历链接。'}
+];
+function reply(q){
+  const lower=q.toLowerCase();
+  const found=answers.find(a=>a.keys.some(k=>lower.includes(k.toLowerCase())));
+  return found?found.answer:'这个问题目前还没有写进我的个人知识库。我不想在不了解事实的情况下随意编造。你可以继续问我关于项目经历、AI 应用实践或职业方向的问题；后续也可以补充更多真实经历，让数字分身回答得更完整。';
+}
+function send(q){
+  q=q.trim();if(!q)return;
+  const log=document.getElementById('chatLog');
+  const u=document.createElement('div');u.className='msg user';u.textContent=q;log.appendChild(u);
+  const b=document.createElement('div');b.className='msg bot';b.textContent=reply(q);log.appendChild(b);
+  log.scrollTop=log.scrollHeight;
+  document.getElementById('chatInput').value='';
+}
+document.getElementById('chatForm').addEventListener('submit',e=>{e.preventDefault();send(document.getElementById('chatInput').value)});
+document.querySelectorAll('[data-q]').forEach(b=>b.addEventListener('click',()=>send(b.dataset.q)));
+
+/* ===== 弹窗 ===== */
+const modal=document.getElementById('modal');
+document.getElementById('resumeBtn').onclick=()=>modal.classList.add('show');
+document.getElementById('closeModal').onclick=()=>modal.classList.remove('show');
+document.getElementById('modalOk').onclick=()=>modal.classList.remove('show');
+modal.addEventListener('click',e=>{if(e.target===modal)modal.classList.remove('show')});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){modal.classList.remove('show');chatCol.classList.remove('open')}});
+
+/* ===== 移动端聊天抽屉 ===== */
+const chatCol=document.getElementById('chatCol');
+document.getElementById('chatToggle').onclick=()=>chatCol.classList.add('open');
+const chatClose=document.getElementById('chatClose');
+if(chatClose){chatClose.onclick=()=>chatCol.classList.remove('open')}
+function syncChatClose(){
+  // 桌面端隐藏关闭按钮，移动端显示
+  chatClose.style.display=window.innerWidth<=980?'block':'none';
+}
+window.addEventListener('resize',syncChatClose);
+syncChatClose();
+</script>
+</body>
+</html>
